@@ -14,7 +14,7 @@ flowchart LR
     Orch --> Eval["05 LLM Eval Harness"]
 ```
 
-## Modulok (6 db)
+## Modulok (8 db)
 
 | # | Modul | Leírás |
 |---|---|---|
@@ -24,6 +24,8 @@ flowchart LR
 | `04` | **[MCP (Model Context Protocol) JSON-RPC 2.0 Mini-szerver](./04-mcp-jsonrpc-server/)** | Szabványos MCP `initialize`, `tools/list` és `tools/call` kérések feldolgozása tiszta JSON-RPC 2.0 rétegen. |
 | `05` | **[LLM Prompt-értékelő és Regressziós Tesztelő (Eval Harness)](./05-llm-eval-harness/)** | Automatikus prompt-minőségmérés arany tesztesetekkel (kötelező kulcsszavak, tiltott minták, max hossz, összesített pontszám). |
 | `06` | **[AI Guardrails: PII-maszkoló & Prompt-Injection Szűrő](./06-ai-guardrails-pii/)** | Személyes adatok (e-mail, telefon, bankkártya) redaktálása LLM-hívás előtt és tipikus prompt-injection minták blokkolása. |
+| `07` | **[Strukturált LLM Kimenet Parser & Repair Hurok](./07-structured-output-parser/)** | JSON kinyerés zajos LLM válaszból, séma-validáció és automatikus javító újrapróbálás. |
+| `08` | **[SQLite Perzisztens AI-Ügynök Memória](./08-agent-memory-sqlite/)** | Munkamenet-izolált, fontosság-alapú epizodikus memória automatikus karbantartással (`prune`). |
 
 ## Összes teszt futtatása
 ```bash
